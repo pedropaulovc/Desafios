@@ -1,0 +1,76 @@
+UVA	458	The Decoder
+UVA	272	TeX Quotes
+SPOJBRASIL	F91	f91
+SPOJBRASIL	PLACAR	Quem vai ser reprovado
+UVA	424	Integer Inquiry
+UVA	382	Perfection
+UVA	10189	Minesweeper
+UVA	10104	Euclid Problem
+UVA	10258	Contest Scoreboard
+UVA	673	Parentheses Balance
+UVA	514	Rails
+UVA	732	Anagrams by Stack
+SPOJ	ONP	Transform the Expression
+SPOJ	HIKE	Hike on a Graph
+SPOJBRASIL	NUMERDOS	Número de Erdos
+SPOJ	EXPRESS	Expressions
+UVA	540	Team Queue
+UVA	10377	Maze Traversal
+UVA	10142	Australian Voting
+UVA	112	Tree Summing
+UVA	122	Trees on the level
+UVA	536	Tree Recovery
+SPOJBRASIL	SORVETE	Sorvete
+SPOJ	FREQUENT	Frequent values
+
+TOPCODER	ApplePie	ApplePie - 250 tchs
+TOPCODER	FrogDerby	FrogDerby - 500 tchs
+TOPCODER	WarehouseJob	WarehouseJob - 1000 tchs
+TOPCODER	DartThrow	DartThrow - 250 tchs
+TOPCODER	SalePitch	SalePitch - 500 tchs
+TOPCODER	RubeGoldberg	RubeGoldberg - 1000 tchs
+SPOJ	WORDS1	Play on Words
+SPOJBRASIL	JUNINA	Festa Junina
+SPOJ	COMCB	Complete Chess Boards
+SPOJBRASIL	DOMINO	Dominó!
+SPOJ	EUROPEAN	European railroad tracks
+UVA	843	Crypt Kicker
+UVA	10160	Servicing stations
+UVA	861	Little Bishops
+SPOJ	SOLIT	Solitaire
+UVA	10181	15-Puzzle Problem
+UVA	10062	Tell me the frequencies
+UVA	120	Stacks of Flapjacks
+UVA	612	DNA Sorting
+UVA	299	Train Swapping
+UVA	10698	Football Sort
+
+UVA	10905	Children's Game
+UVA	263	Number Chains
+UVA	10258	Contest Scoreboard
+UVA	11057	Exact Sum
+UVA	10810	Ultra-Quicksort
+TOPCODER	Surname	Surname
+TOPCODER	Postnet	Postnet
+TOPCODER	Touchdown	Touchdown
+UVA	701	The Archeologists' Dilemma
+UVA	474	Heads / Tails Probability
+UVA	10018	Reverse and Add
+UVA	10077	The Stern-Brocot Number System
+UVA	847	A Multiplication Game
+UVA	10254	The Priest Mathematician
+UVA	10198	Counting
+UVA	846	Steps
+SPOJ	SOLIT	Solitaire
+UVA	10181	15-Puzzle Problem
+UVA	10160	Servicing stations
+UVA	10219	Find the ways!
+UVA	10784	Diagonal
+UVA	10338	Mischievous Children
+TOPCODER	Prank	Prank - 250 div 2
+TOPCODER	Library	Library - 500 div 2
+TOPCODER	PowerGame	PowerGame - 1000 div 2
+TOPCODER	MedianOfNumbers	MedianOfNumbers - 250 div 2
+TOPCODER	HuffmanDecoding	HuffmanDecoding - 500 div 2 e 250 div 1
+TOPCODER	TreasuresPacking	TreasuresPacking - 1000 div 2
+

@@ -1,0 +1,60 @@
+10338	Mischievous Children 
+10219	Find the ways! 
+10784	Diagonal 
+846	Steps 
+10254	The Priest Mathematician 
+10198	Counting 
+10018	Reverse and Add 
+474	Heads / Tails Probability 
+701	The Archaeologist's Dilemma 
+847	A Multiplication Game 
+10077	The Stern-Brocot Number System 
+10905	Childrens Game 
+10810	Ultra-QuickSort 
+10037	Bridge 
+120	Stacks of Flapjacks 
+612	DNA Sorting 
+112	Tree Summing 
+10701	Pre, in and post 
+514	Rails 
+10377	Maze Traversal 
+10142	Australian Voting 
+272	TeX Quotes 
+458	The Decoder 
+10189	Minesweeper 
+100	The 3n+1 Problem 
+424	Integer Inquiry 
+382	Perfection 
+10104	Euclid Problem 
+10041	Vito's Family 
+10050	Hartals 
+10258	Contest Scoreboard 
+
+10032	Tug of War 
+10160	Servicing Stations 
+861	Little Bishops 
+843	Crypt Kicker 
+841	Snake 
+10181	15-Puzzle Problem 
+
+10379	Pit Stop Strategy 
+10003	Cutting Sticks 
+10271	Chopsticks 
+10066	The Twin Towers 
+10154	Weights and Measures 
+10091	The Valentine's Day 
+10075	Airlines 
+10034	Freckles 
+10054	The Necklace 
+10051	Tower of cubes 
+10044	Erdös numbers 
+10004	Bicoloring 
+10187	From Dusk to Down 
+10029	Edit Step Ladders 
+841	Snake 
+10181	15-Puzzle Problem 
+10131	Is Bigger Smarter? 
+10149	Yahtzee 
+
+10310	Dog and Gopher 
+10047	The Monocycle 

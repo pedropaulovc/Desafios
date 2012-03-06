@@ -1,0 +1,29 @@
+UVA	10905	Children's Game			OK
+UVA	10810	Ultra-QuickSort				Ordenação
+UVA	10784	Diagonal				Combinatória
+UVA	10377	Maze Traversal			OK
+UVA	10338	Mischievous Children			Combinatória
+UVA	10258	Contest Scoreboard		OK
+UVA	10254	The Priest Mathematician		Combinatória
+UVA	10219	Find the Ways!				Combinatória
+UVA	10198	Counting				Combinatória
+UVA	10189	Minesweeper			OK	
+UVA	10181	15-Puzzle Problem			Backtracking
+UVA	10160	Servicing Stations			Backtracking
+UVA	10142	Australian Voting		OK
+UVA	10104	Euclid Problem				Teoria de Números
+UVA	10018	Reverse and Add			OK
+UVA	861	Little Bishops				Backtracking
+UVA	847	A Multiplication Game			Aritmética e álgebra
+UVA	846	Steps				OK
+UVA	843	Crypt Kicker			OK
+UVA	701	The Archeologists' Dilemma	OK
+UVA	612	DNA Sorting			OK
+UVA	514	Rails				OK
+UVA	474	Heads / Tails Probability		Aritmética e álgebra
+UVA	458	The Decoder			OK
+UVA	424	Integer Inquiry			OK
+UVA	272	Tex Quotes			OK
+UVA	120	Stacks of Flapjacks 		OK
+UVA	112	Tree Summming			OK
+
