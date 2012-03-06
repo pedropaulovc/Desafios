@@ -2,6 +2,7 @@
 #include <vector>
 #include <sstream>
 #include <cmath>
+#include <cstdio>
 
 using namespace std;
 
@@ -9,9 +10,12 @@ typedef struct {
 	int qtd, custo;
 } opcao;
 
+#define MAX_QTD 101
+#define MAX_OPCOES 6
+
 class VolumeDiscount {
 vector<opcao> opcoes;
-int menores_custos[101][6];
+int menores_custos[MAX_QTD][MAX_OPCOES];
 
 public:
 	int bestDeal(vector <string> priceList, int quantity);
@@ -22,9 +26,7 @@ int VolumeDiscount::obter_menor_custo(int opcao, int qtd) {
 	if(menores_custos[qtd][opcao] != -1)
 		return menores_custos[qtd][opcao];
 
-	int max_compras = ceil(1.0 * qtd / opcoes[0].qtd);
-
-	cout << opcao << " " << qtd << " " << max_compras << endl;
+	int max_compras = ceil(1.0 * qtd / opcoes[opcao].qtd);
 	
 	if(opcao == 0)
 		return opcoes[0].custo * max_compras;
@@ -46,8 +48,8 @@ int VolumeDiscount::obter_menor_custo(int opcao, int qtd) {
 }
 
 int VolumeDiscount::bestDeal(vector <string> priceList, int quantity){
-	for(int i = 0; i < 101; i++){
-		for(int j = 0; j < 6; j++){
+	for(int i = 0; i < MAX_QTD; i++){
+		for(int j = 0; j < MAX_OPCOES; j++){
 			menores_custos[i][j] = -1;
 		}
 	}
@@ -64,13 +66,19 @@ int VolumeDiscount::bestDeal(vector <string> priceList, int quantity){
 	return obter_menor_custo(tam - 1, quantity);
 }
 
-int main(){	
-	VolumeDiscount vd;
+int main(){
+	int qtd;
+	string linha;
 	vector<string> priceList;
-	priceList.push_back("2 272");
-	priceList.push_back("1 166");
-	priceList.push_back("10 993");
-
-	cout << vd.bestDeal(priceList, 81);
+	VolumeDiscount vd;
+	
+	cin >> qtd;
+	getchar();
+	while(getline(cin, linha)){
+		priceList.push_back(linha);
+	}
+	
+	cout << vd.bestDeal(priceList, qtd);
+	
 	return 0;
 }
