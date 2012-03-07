@@ -9,7 +9,7 @@
 
 using namespace std;
 
-int main_458(int argc, char **argv) {
+int main(int argc, char **argv) {
 	int letra;
 
 	while((letra = getchar()) != EOF){
