@@ -27,7 +27,7 @@ bool melhor_participante(participante p1, participante p2) {
 	return p1.id < p2.id;
 }
 
-int main_10258() {
+int main() {
 	int num_entradas, num_part, num_prob, tempo;
 	char status;
 	vector<participante> parts;

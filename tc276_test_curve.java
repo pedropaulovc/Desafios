@@ -22,7 +22,5 @@ public class TestCurve {
 		}
 		
 		return scores;
-		
 	}
-
 }

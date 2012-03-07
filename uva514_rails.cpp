@@ -36,7 +36,7 @@ bool eh_permutacao_pilha(int n, int permutacao[]) {
 	return true;
 }
 
-int main_514() {
+int main() {
 	int tam_trem;
 	int permutacao[1000];
 
