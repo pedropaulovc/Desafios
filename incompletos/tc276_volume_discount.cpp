@@ -80,7 +80,7 @@ int main(){
 	}
 	cin >> qtd;
 	
-	cout << vd.bestDeal(priceList, qtd);
+	cout << vd.bestDeal(priceList, qtd) << endl;
 	
 	return 0;
 }
