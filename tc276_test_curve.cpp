@@ -33,6 +33,8 @@ typedef pair<int, int> pii;
 typedef long long ll;
 typedef long double ld;
 
+#define EPS 0.0001
+
 vector<int>  determineGrades(vector<int> scores){
 	int max = scores[0];
 
@@ -46,9 +48,10 @@ vector<int>  determineGrades(vector<int> scores){
 	debug(cout << coef << endl;)
 		
 	for(int i = 0; i < len; i++){
-		scores[i] = scores[i] * coef;
+		debug(cout << scores[i] * coef + EPS << endl;)
+		scores[i] = scores[i] * coef + EPS;
 	}
-	
+	debug(cout << endl;)
 	return scores;
 }
 
