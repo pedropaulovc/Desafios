@@ -6,6 +6,7 @@
 
 using namespace std;
 
+typedef long long ll;
 typedef struct {
 	int qtd, custo;
 } opcao;
@@ -15,14 +16,16 @@ typedef struct {
 
 class VolumeDiscount {
 vector<opcao> opcoes;
-int menores_custos[MAX_QTD][MAX_OPCOES];
+ll menores_custos[MAX_QTD][MAX_OPCOES];
 
 public:
 	int bestDeal(vector <string> priceList, int quantity);
-	int obter_menor_custo(int opcao, int qtd);
+	ll obter_menor_custo(int opcao, int qtd);
 };
 
-int VolumeDiscount::obter_menor_custo(int opcao, int qtd) {
+ll VolumeDiscount::obter_menor_custo(int opcao, int qtd) {
+	if(qtd <= 0)
+		return 0;
 	if(menores_custos[qtd][opcao] != -1)
 		return menores_custos[qtd][opcao];
 
@@ -31,8 +34,8 @@ int VolumeDiscount::obter_menor_custo(int opcao, int qtd) {
 	if(opcao == 0)
 		return opcoes[0].custo * max_compras;
 	
-	int menor_custo = obter_menor_custo(opcao - 1, qtd);
-	int custo_tmp;
+	ll menor_custo = obter_menor_custo(opcao - 1, qtd);
+	ll custo_tmp;
 	for(int i = 1; i <= max_compras; i++){
 		custo_tmp = i * opcoes[opcao].custo;
 		custo_tmp += obter_menor_custo(opcao - 1, qtd - i * opcoes[opcao].qtd);
@@ -44,6 +47,7 @@ int VolumeDiscount::obter_menor_custo(int opcao, int qtd) {
 	}
 	
 	menores_custos[qtd][opcao] = menor_custo;
+	
 	return menor_custo;
 }
 
@@ -80,7 +84,7 @@ int main(){
 	}
 	cin >> qtd;
 	
-	cout << vd.bestDeal(priceList, qtd);
+	cout << vd.bestDeal(priceList, qtd) << endl;
 	
 	return 0;
 }
