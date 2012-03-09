@@ -56,9 +56,6 @@ int gcd(ll a, ll b){
 }
 
 coef calcular_algoritmo_euclides(ll a, ll b){
-	if(a < b)
-		return calcular_algoritmo_euclides(b, a);
-
 	ll mod, quoc;	
 	ll x1 = 1;
 	ll y1 = 0;
@@ -67,7 +64,7 @@ coef calcular_algoritmo_euclides(ll a, ll b){
 	ll y2 = 1;
 
 	ll tmpx = a, tmpy = b;
-	while(mod != 0){
+	do {
 		debug(cout << tmpx << " " << x1 << " " << y1 << endl;)
 		debug(cout << tmpy << " " << x2 << " " << y2 << endl << endl;)
 		
@@ -85,7 +82,7 @@ coef calcular_algoritmo_euclides(ll a, ll b){
 		
 		a = b;
 		b = mod;
-	}
+	} while(mod != 0);
 	
 	coef coefs;
 	
@@ -101,6 +98,12 @@ int main(){
 	
 	coef coefs;
 	while(cin >> a >> b){
+		if(a < b){
+			coefs = calcular_algoritmo_euclides(b, a);
+			cout << coefs.y << " " << coefs.x << " " << coefs.d << endl;
+			continue;
+		}
+
 		coefs = calcular_algoritmo_euclides(a, b);
 		cout << coefs.x << " " << coefs.y << " " << coefs.d << endl;
 	}
