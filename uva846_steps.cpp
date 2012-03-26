@@ -1,56 +1,77 @@
-/*
- * 846-steps.cpp
- *
- *  Created on: Feb 14, 2012
- *      Author: pedropaulovc
- */
-
-#include <iostream>
-
+#include<iostream>
+#include<stack>
+#include<queue>
+#include<cstdio>
+#include<algorithm>
+#include<vector>
+#include<set>
+#include<list>
+#include<string>
+#include<cstring>
+#include<map>
+#include<numeric>
+#include<sstream>
+#include<cmath>
 using namespace std;
+#define all(v) (v).begin(), (v).end()
+#define rall(v) (v).rbegin(), (v).rend()
+#define pb push_back
+#define f(i,x,y) for(int i = x; i<y; i++ )
+#define FORV(it,A) for(vector<int>::iterator it = A.begin(); it!= A.end(); it++)
+#define FORS(it,A) for(set<int>::iterator it = A.begin(); it!= A.end(); it++)
+#define quad(x) (x) * (x)
+#define mp make_pair
+#define clr(x, y) memset(x, y, sizeof x)
+#define fst first
+#define snd second
+#ifdef DEBUG
+#define debug(x) x
+#else
+#define debug(x)
+#endif
+typedef pair<int, int> pii;
+typedef long long ll;
+typedef long double ld;
 
-/**
- * Passos         | Inc. tam. passo | Qtd. passos | Dist. percorrida
- * 0              |                 | 0           | 0
- * 1              |  + 1            | 1           | 1
- * 1 1            |  + 1            | 2           | 2
- * 1 2 1          |  + 2            | 3           | 4
- * 1 2 2 1        |  + 2            | 4           | 6
- * 1 2 3 2 1      |  + 3            | 5           | 9
- * 1 2 3 3 2 1    |  + 4            | 6           | 12
- * 1 2 3 4 3 2 1  |  + 5            | 7           | 16
- */
-
-int calcular_passos(int origem, int destino) {
-	int passos = 0;
-	int	distancia = destino - origem;
-	int tam_passo = 1;
-
-	while(distancia > 0){
+int calcula_qtd_passos(int origem, int destino){
+	int passos_limite = 1;
+	int meio = 1;
+	int passos = 1;
+	
+	if(origem == destino)
+		return 0;
+	
+	while(passos_limite < destino - origem){
 		passos++;
-		distancia -= tam_passo;
-
-		if(distancia <= 0)
-			return passos;
-
+		passos_limite += meio;
+		debug(cout << passos << " ";)
+		if(passos_limite >= destino - origem)
+			break;
 		passos++;
-		distancia -= tam_passo;
-
-		tam_passo++;
+		passos_limite += ++meio;
+		debug(cout << passos << " ";)
 	}
-
+	
+	debug(cout << endl;)
 	return passos;
 }
 
-int main_846() {
-	int num_testes, origem, destino;
-
-	cin >> num_testes;
-
-	for (int i = 0; i < num_testes; i++) {
+int main(){
+	int qtd_testes, origem, destino;
+	cin >> qtd_testes;
+	
+	f(i, 0, qtd_testes){
 		cin >> origem >> destino;
-		cout << calcular_passos(origem, destino) << endl;
+		
+		if(destino < origem){
+			int aux = destino;
+			destino = origem;
+			origem = aux;
+		}
+		
+		cout << calcula_qtd_passos(origem, destino) << endl;
 	}
+
 
 	return 0;
 }
