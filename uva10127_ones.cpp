@@ -1,0 +1,65 @@
+#include<iostream>
+#include<stack>
+#include<queue>
+#include<cstdio>
+#include<algorithm>
+#include<vector>
+#include<set>
+#include<list>
+#include<string>
+#include<cstring>
+#include<map>
+#include<numeric>
+#include<sstream>
+#include<cmath>
+using namespace std;
+#define all(v) (v).begin(), (v).end()
+#define rall(v) (v).rbegin(), (v).rend()
+#define pb push_back
+#define f(i,x,y) for(int i = x; i<y; i++ )
+#define FORV(it,A) for(vector<int>::iterator it = A.begin(); it!= A.end(); it++)
+#define FORS(it,A) for(set<int>::iterator it = A.begin(); it!= A.end(); it++)
+#define quad(x) (x) * (x)
+#define mp make_pair
+#define clr(x, y) memset(x, y, sizeof x)
+#define fst first
+#define snd second
+#ifdef DEBUG
+#define debug(x) x
+#else
+#define debug(x)
+#endif
+typedef pair<int, int> pii;
+typedef long long ll;
+typedef long double ld;
+
+int calcula_qtd_digitos(int n){
+	int mod = 1;
+	int qtd_digitos = 0;
+	
+	while(mod < n){
+		mod = mod * 10 + 1;
+		qtd_digitos++;
+	}
+	
+	while(mod != 0){
+		debug(cout << mod << " ");
+		mod = mod % n;
+		qtd_digitos++;
+		if(mod % n != 0)
+			mod = mod * 10 + 1;
+	}
+	
+	debug(cout << endl);
+	return qtd_digitos;
+}
+
+int main(){
+	int n;
+	
+	while(cin >> n)
+		cout << calcula_qtd_digitos(n) << endl;
+
+	return 0;
+}
+
