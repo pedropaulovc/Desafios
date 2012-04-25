@@ -33,11 +33,33 @@ typedef pair<int, int> pii;
 typedef long long ll;
 typedef long double ld;
 
+int calcula_qtd_digitos(int n){
+	int mod = 1;
+	int qtd_digitos = 0;
+	
+	while(mod < n){
+		mod = mod * 10 + 1;
+		qtd_digitos++;
+	}
+	
+	while(mod != 0){
+		debug(cout << mod << " ");
+		mod = mod % n;
+		qtd_digitos++;
+		if(mod % n != 0)
+			mod = mod * 10 + 1;
+	}
+	
+	debug(cout << endl);
+	return qtd_digitos;
+}
+
 int main(){
-	int lado, qtd_bispos;
+	int n;
 	
-	while(cin >> lado >> qtd_bispos && (lado != 0 && qtd_bispos != 0))
-		cout << calcular_qtd_posicoes(lado, qtd_bispos) << endl;
-	
+	while(cin >> n)
+		cout << calcula_qtd_digitos(n) << endl;
+
 	return 0;
 }
+
