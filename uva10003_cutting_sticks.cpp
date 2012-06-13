@@ -12,6 +12,7 @@
 #include<numeric>
 #include<sstream>
 #include<cmath>
+#include<climits>
 using namespace std;
 #define all(v) (v).begin(), (v).end()
 #define rall(v) (v).rbegin(), (v).rend()
@@ -33,52 +34,52 @@ typedef pair<int, int> pii;
 typedef long long ll;
 typedef long double ld;
 
-int qtd_cenarios, qtd_papers, qtd_consultas, qtd_autores;
-map<int, string> nomes;
-map<string, int> vertices;
-vector<string> papers;
+int comprimento;
+int qtd_cortes;
+vector<int> cortes;
+int pd[53][53];
+
+int solve (int i, int f) {
+    if (i + 1 == f)
+    	return 0;
+
+    if (pd[i][f] != -1)
+        return pd[i][f];
+
+    int custo;
+    int min = INT_MAX;
+
+    for (int k = i + 1; k < f; k++) {
+        custo = solve (i, k) + solve (k, f) + cortes[f] - cortes[i];
+        if (custo < min) min = custo;
+    }
+
+    return pd[i][f] = min;
+}
 
 
 int main(){
-	stringstream ss;
-	char c;
-	
-	cin >> qtd_cenarios;
-	
-	string nome;
-	f(i, 0, qtd_cenarios){
-		qtd_autores = 0;
+	int corte;
+	while(cin >> comprimento && comprimento > 0){
+		cortes.clear();
 		
-		cin >> qtd_papers >> qtd_consultas;
-		getchar();
+		cin >> qtd_cortes;
 		
-		string linha;
-		f(j, 0, qtd_papers){
-			getline(cin, linha);
-			int k = 0;
+		cortes.pb(0);
+		f(i, 0, qtd_cortes){
+			cin >> corte;
+			cortes.pb(corte);
+		}
+		cortes.pb(comprimento);
+		
+		f(i, 0, 53)
+			f(j, 0, 53)
+				pd[i][j] = -1;
 			
-			do{
-				ss.clear();
-				while((c = linha[k++]) && c != ','){
-					ss << c;
-				}
-				ss << c;
-				while((c = linha[k++]) && (c != ',' || c != ':')){
-					ss << c;
-				}
 		
-				nome = ss.str();
-				debug(cout << nome << endl);
-				if(vertices.find(nome) == vertices.end()){
-					vertices[nome] = qtd_autores;
-					nomes[qtd_autores] = nome;
-					qtd_autores++;
-				}
-				
-			} while(c != ':');
-		}		
-			
+		cout << "The minimum cutting is " << 
+			solve(0, qtd_cortes + 1) << "." << endl;
 	}
-	
+
 	return 0;
 }
